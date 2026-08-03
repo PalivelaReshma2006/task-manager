@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>TaskFlow | Smart Task Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<!--==============================
+ Animated Background
+===============================-->
+
+<div class="blob blob1"></div>
+<div class="blob blob2"></div>
+<div class="blob blob3"></div>
+
+<!--==============================
+ Sidebar
+===============================-->
+
+<div class="sidebar">
+
+    <div class="logo">
+
+        <i class="fa-solid fa-layer-group"></i>
+
+        <h2>TaskFlow</h2>
+
+    </div>
+
+    <ul>
+
+        <li class="active">
+
+            <i class="fa-solid fa-house"></i>
+
+            Dashboard
+
+        </li>
+
+        <li>
+
+            <i class="fa-solid fa-list-check"></i>
+
+            My Tasks
+
+        </li>
+
+        <li>
+
+            <i class="fa-solid fa-calendar-days"></i>
+
+            Calendar
+
+        </li>
+
+        <li>
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            Analytics
+
+        </li>
+
+        <li>
+
+            <i class="fa-solid fa-folder"></i>
+
+            Projects
+
+        </li>
+
+        <li>
+
+            <i class="fa-solid fa-bell"></i>
+
+            Notifications
+
+        </li>
+
+        <li>
+
+            <i class="fa-solid fa-gear"></i>
+
+            Settings
+
+        </li>
+
+    </ul>
+
+</div>
+
+<!--==============================
+ Main Content
+===============================-->
+
+<div class="main">
+
+<header>
+
+<div class="search">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+<input
+type="text"
+placeholder="Search tasks...">
+
+</div>
+
+<div class="header-right">
+
+<button id="themeBtn">
+
+<i class="fa-solid fa-moon"></i>
+
+</button>
+
+<div class="notification">
+
+<i class="fa-solid fa-bell"></i>
+
+<span>3</span>
+
+</div>
+
+<img
+src="profile.jpg"
+class="profile"
+alt="Profile">
+
+</div>
+
+</header>
+
+<!--==============================
+ Welcome Section
+===============================-->
+
+<section class="welcome">
+
+<div>
+
+<h1>
+
+Good Morning 👋
+
+</h1>
+
+<p>
+
+Stay productive and finish your daily goals.
+
+</p>
+
+</div>
+
+<button>
+
+<i class="fa-solid fa-plus"></i>
+
+New Task
+
+</button>
+
+</section>
+
+<!--==============================
+ Statistics Cards
+===============================-->
+
+<section class="cards">
+
+<div class="card">
+
+<div>
+
+<h3>Total Tasks</h3>
+
+<h1>24</h1>
+
+</div>
+
+<i class="fa-solid fa-list-check"></i>
+
+</div>
+
+<div class="card">
+
+<div>
+
+<h3>Pending</h3>
+
+<h1>8</h1>
+
+</div>
+
+<i class="fa-solid fa-clock"></i>
+
+</div>
+
+<div class="card">
+
+<div>
+
+<h3>Completed</h3>
+
+<h1>16</h1>
+
+</div>
+
+<i class="fa-solid fa-circle-check"></i>
+
+</div>
+
+<div class="card">
+
+<div>
+
+<h3>Productivity</h3>
+
+<h1>78%</h1>
+
+</div>
+
+<i class="fa-solid fa-chart-line"></i>
+
+</div>
+
+</section>
+<!--==============================
+ Add Task Section
+===============================-->
+
+<section class="task-container">
+
+    <div class="add-task">
+
+        <h2>
+            <i class="fa-solid fa-plus"></i>
+            Create New Task
+        </h2>
+
+        <form>
+
+            <input
+                type="text"
+                placeholder="Task Title">
+
+            <textarea
+                placeholder="Task Description"></textarea>
+
+            <div class="row">
+
+                <input type="date">
+
+                <select>
+
+                    <option>High Priority 🔴</option>
+
+                    <option>Medium Priority 🟡</option>
+
+                    <option>Low Priority 🟢</option>
+
+                </select>
+
+            </div>
+
+            <button>
+
+                <i class="fa-solid fa-paper-plane"></i>
+
+                Add Task
+
+            </button>
+
+        </form>
+
+    </div>
+
+    <!--=========================
+      Progress Card
+    ==========================-->
+
+    <div class="progress-card">
+
+        <h2>Today's Progress</h2>
+
+        <div class="circle">
+
+            <h1>78%</h1>
+
+        </div>
+
+        <p>
+
+            18 of 24 Tasks Completed
+
+        </p>
+
+        <div class="progress-bar">
+
+            <div class="progress-fill"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==============================
+ Kanban Board
+===============================-->
+
+<section class="kanban">
+
+    <h2>
+
+        <i class="fa-solid fa-table-columns"></i>
+
+        Smart Task Board
+
+    </h2>
+
+    <div class="board">
+
+        <!-- To Do -->
+
+        <div class="column">
+
+            <h3>
+
+                📝 To Do
+
+                <span>4</span>
+
+            </h3>
+
+            <div class="task-card high">
+
+                <h4>
+
+                    Design Dashboard UI
+
+                </h4>
+
+                <p>
+
+                    Create modern homepage.
+
+                </p>
+
+                <small>
+
+                    📅 Today
+
+                </small>
+
+            </div>
+
+            <div class="task-card medium">
+
+                <h4>
+
+                    Learn MongoDB
+
+                </h4>
+
+                <p>
+
+                    Practice CRUD APIs.
+
+                </p>
+
+                <small>
+
+                    📅 Tomorrow
+
+                </small>
+
+            </div>
+
+        </div>
+
+        <!-- In Progress -->
+
+        <div class="column">
+
+            <h3>
+
+                🚀 In Progress
+
+                <span>2</span>
+
+            </h3>
+
+            <div class="task-card warning">
+
+                <h4>
+
+                    Build Backend
+
+                </h4>
+
+                <p>
+
+                    Complete Express routes.
+
+                </p>
+
+                <small>
+
+                    🔥 High Priority
+
+                </small>
+
+            </div>
+
+        </div>
+
+        <!-- Completed -->
+
+        <div class="column">
+
+            <h3>
+
+                ✅ Completed
+
+                <span>8</span>
+
+            </h3>
+
+            <div class="task-card success">
+
+                <h4>
+
+                    GitHub Upload
+
+                </h4>
+
+                <p>
+
+                    Repository published.
+
+                </p>
+
+                <small>
+
+                    ✔ Finished
+
+                </small>
+
+            </div>
+
+            <div class="task-card success">
+
+                <h4>
+
+                    Portfolio Website
+
+                </h4>
+
+                <p>
+
+                    Responsive UI completed.
+
+                </p>
+
+                <small>
+
+                    ✔ Done
+
+                </small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==============================
+ Quick Analytics
+===============================-->
+
+<section class="analytics">
+
+    <div class="analytics-card">
+
+        <i class="fa-solid fa-fire"></i>
+
+        <h3>5 Day Streak</h3>
+
+        <p>
+
+            Keep completing tasks every day.
+
+        </p>
+
+    </div>
+
+    <div class="analytics-card">
+
+        <i class="fa-solid fa-bolt"></i>
+
+        <h3>Efficiency</h3>
+
+        <h2>92%</h2>
+
+    </div>
+
+    <div class="analytics-card">
+
+        <i class="fa-solid fa-trophy"></i>
+
+        <h3>Achievements</h3>
+
+        <p>
+
+            50+ Tasks Completed
+
+        </p>
+
+    </div>
+
+</section>
+<!--==============================
+ Bottom Dashboard
+===============================-->
+
+<section class="bottom-dashboard">
+
+    <!-- Calendar -->
+
+    <div class="calendar-card">
+
+        <h2>
+
+            <i class="fa-solid fa-calendar-days"></i>
+
+            Upcoming Schedule
+
+        </h2>
+
+        <div class="event">
+
+            <span class="date">28</span>
+
+            <div>
+
+                <h4>UI Design Meeting</h4>
+
+                <p>10:00 AM</p>
+
+            </div>
+
+        </div>
+
+        <div class="event">
+
+            <span class="date">29</span>
+
+            <div>
+
+                <h4>Backend Development</h4>
+
+                <p>2:00 PM</p>
+
+            </div>
+
+        </div>
+
+        <div class="event">
+
+            <span class="date">30</span>
+
+            <div>
+
+                <h4>Project Submission</h4>
+
+                <p>11:59 PM</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Recent Activity -->
+
+    <div class="activity-card">
+
+        <h2>
+
+            <i class="fa-solid fa-clock-rotate-left"></i>
+
+            Recent Activity
+
+        </h2>
+
+        <ul>
+
+            <li>
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                Portfolio task completed
+
+            </li>
+
+            <li>
+
+                <i class="fa-solid fa-pen"></i>
+
+                Updated MongoDB Project
+
+            </li>
+
+            <li>
+
+                <i class="fa-solid fa-trash"></i>
+
+                Deleted old task
+
+            </li>
+
+            <li>
+
+                <i class="fa-solid fa-plus"></i>
+
+                Added new Internship Task
+
+            </li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+<!--==============================
+ Team Members
+===============================-->
+
+<section class="team">
+
+<h2>
+
+<i class="fa-solid fa-users"></i>
+
+Team Members
+
+</h2>
+
+<div class="members">
+
+<div class="member">
+
+<img src="https://i.pravatar.cc/100?img=12">
+
+<h4>Alex</h4>
+
+<p>Frontend</p>
+
+</div>
+
+<div class="member">
+
+<img src="https://i.pravatar.cc/100?img=32">
+
+<h4>Sophia</h4>
+
+<p>Backend</p>
+
+</div>
+
+<div class="member">
+
+<img src="https://i.pravatar.cc/100?img=15">
+
+<h4>Daniel</h4>
+
+<p>UI Designer</p>
+
+</div>
+
+<div class="member">
+
+<img src="https://i.pravatar.cc/100?img=48">
+
+<h4>Emma</h4>
+
+<p>Testing</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!--==============================
+ Quote
+===============================-->
+
+<section class="quote-card">
+
+<i class="fa-solid fa-lightbulb"></i>
+
+<h2>
+
+Today's Motivation
+
+</h2>
+
+<p>
+
+"Success doesn't come from what you do occasionally,
+it comes from what you do consistently."
+
+</p>
+
+</section>
+
+<!--==============================
+ Footer
+===============================-->
+
+<footer>
+
+<div class="footer-left">
+
+<h2>
+
+TaskFlow
+
+</h2>
+
+<p>
+
+Smart Task Management Dashboard
+
+</p>
+
+</div>
+
+<div class="footer-center">
+
+<a href="#">
+
+<i class="fa-brands fa-github"></i>
+
+</a>
+
+<a href="#">
+
+<i class="fa-brands fa-linkedin"></i>
+
+</a>
+
+<a href="#">
+
+<i class="fa-brands fa-twitter"></i>
+
+</a>
+
+<a href="#">
+
+<i class="fa-solid fa-envelope"></i>
+
+</a>
+
+</div>
+
+<div class="footer-right">
+
+<p>
+
+© 2026 TaskFlow
+
+<br>
+
+Made with ❤️ using HTML, CSS & JavaScript
+
+</p>
+
+</div>
+
+</footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
